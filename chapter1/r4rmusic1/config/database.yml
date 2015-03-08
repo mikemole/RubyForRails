@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: r4r
+  password: railzrulez
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: r4rmusic1_development
+
+
+test:
+  <<: *default
+  database: r4rmusic1_test
+
+
+production:
+  <<: *default
+  database: r4rmusic1_production
