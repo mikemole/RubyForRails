@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  root :to => 'main#welcome'
+
+  # Route 'main/welcome' to welcome action of main controller
+  get 'main/welcome' => 'main#welcome'
+
+  match ':controller/:action/:id', via: [:get, :post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
